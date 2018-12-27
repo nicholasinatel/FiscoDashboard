@@ -1,0 +1,50 @@
+{
+    "cod_return": 200,
+    "data": [{
+                "description": "ATIVO",
+                "dif_date_end": 0,
+                "dif_date_start": 0,
+                "value_date_end": -209040108.16,
+                "value_date_start": -272746033.08,
+                "var_percent": 0,
+                "var_value": 0
+            }, {
+                "description": "ATIVO CIRCULANTE",
+                "dif_date_end": 0,
+                "dif_date_start": 0,
+                "value_date_end": -209617085.28,
+                "value_date_start": -273158989.79,
+                "var_percent": 0,
+                "var_value": 0
+            }, {
+                "description": "DISPONIBILIDADES",
+                "dif_date_end": 0,
+                "dif_date_start": 0,
+                "value_date_end": 212513705.76,
+                "value_date_start": 217861527.33,
+                "var_percent": 0,
+                "var_value": 0
+            }, {
+                "description": "CAIXA GERAL",
+                "dif_date_end": "",
+                "dif_date_start": "",
+                "value_date_end": 184732103.31,
+                "value_date_start": 199281370.81,
+                "var_percent": 0,
+                "var_value": 0
+            }, {
+                "description": "BANCOS CONTA MOVIMENTO",
+                "dif_date_end": "",
+                "dif_date_start": "",
+                "value_date_end": 28490103.04,
+                "value_date_start": 20886289.74,
+                "var_percent": 0,
+                "var_value": 0
+            }, {
+                "description": "APLICACOES",
+                "dif_date_end": "",
+                "dif_date_start": "",
+                "value_date_end": -708500.59,
+                "value_date_start": -2306133.22,
+                "var_percent": 0,
+                "va…

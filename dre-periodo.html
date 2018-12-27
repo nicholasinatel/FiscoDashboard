@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Fiscoserv</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- CSS -->
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet" />
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <!--Font Awesome (added because you use icons in your prepend/append)-->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+    <!--   Core JS Files   -->
+    <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!-- Raytable -->
+    <script src="assets/js/raydreams.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- RayTable + AJAX Request-->
+    <script src="assets/js/launch.js" type="text/javascript"></script>
+    <script src="assets/js/main.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="assets/css/datepicker.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="main-panel">
+            <style>
+                .main-panel {float: none; width: 100%;}
+            </style>
+            <!-- Main Content Begin -->
+            <!--iframe dre-periodo -->
+            <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 ">
+                        <div class="formden_header">
+                            <h2>
+                                Demonstração de Resultado Empresarial
+                            </h2>
+                            <p>
+                                Entre com o período para comparação:
+                            </p>
+                        </div>
+                        <!-- Form code begins -->
+                        <form id="form-container" method="post">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group ">
+                                            <!-- Primeiro Periodo -->
+                                            <label class="control-label requiredField" for="date-start-1">
+                                                Primeira Periodo
+                                                <span class="asteriskField">*</span>
+                                            </label>
+                                            <!-- Date Input 1 0f 4-->
+                                            <p>Primeira Data</p>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-th"></i>
+                                                </div>
+                                                <input class="form-control" id="date-start-1" name="date-start-1"
+                                                    placeholder="MM/YYYY" type="text" data-toggle="date-start-1" />
+                                            </div>
+                                            <!-- Date Input 2 of 4-->
+                                            <p>Segunda Data</p>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-th"></i>
+                                                </div>
+                                                <input class="form-control" id="date-end-1" name="date-end-1"
+                                                    placeholder="MM/YYYY" type="text" data-toggle="date-end-1" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group ">
+                                            <!-- Segundo Periodo -->
+                                            <label class="control-label requiredField" for="date-start-2">
+                                                Segundo Periodo
+                                                <span class="asteriskField">*</span>
+                                            </label>
+                                            <!-- Date Input 3 of 4 -->
+                                            <p>Terceira Data</p>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-th"></i>
+                                                </div>
+                                                <input class="form-control" id="date-start-2" name="date-start-2"
+                                                    placeholder="MM/YYYY" type="text" data-toggle="date-start-2" />
+                                            </div>
+                                            <!-- Date Input 4 of 4 -->
+                                            <p>Quarta Data</p>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-th"></i>
+                                                </div>
+                                                <input class="form-control" id="date-end-2" name="date-end-2"
+                                                    placeholder="MM/YYYY" type="text" data-toggle="date-end-2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="pesquisar">
+                                    <input type="button" onclick="doLoad(this,1)" value="Pesquisar" class="btn btn-primary" />
+                                </div>
+                            </div>
+                        </form>
+                        <!-- Grafico -->
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Gráfico</h4>
+                                <p class="category">DRE</p>
+                            </div>
+                            <div class="content">
+                                <div id="chartHours" class="ct-chart"></div>
+                                <div class="footer">
+                                    <div class="legend">
+                                        <i class="fa fa-circle color-date-start"></i>
+                                        <span id="insert-data-1"></span>
+                                        <i class="fa fa-circle color-date-end"></i>
+                                        <span id="insert-data-2"></span>
+                                        <!--
+                                        <i class="fa fa-circle color-receita-bruta"></i>
+                                        <span>RECEITA BRUTA</span>
+                                        <i class="fa fa-circle color-deucao-receita"></i>
+                                        <span>(-) DEDUÇÕES DA RECEITA</span>
+                                        <i class="fa fa-circle color-custo-vendas"></i>
+                                        <span>(-) CUSTO DAS VENDAS E SERVIÇOS</span>
+                                        <i class="fa fa-circle color-despesas-operacionais"></i>
+                                        <span>(-) DESPESAS OPERACIONAIS</span>-->
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="fa fa-check"></i> Fiscoserv Certified
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1/2 Screen -->
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" id="dynamic-table">
+                        <div class="header">
+                            <h2 class="title">Tabela DRE</h2>
+                        </div>
+                        <div class="content table-responsive table-full-width">
+                            <div id="dataTable" class="table table-bordered" cellspacing="0" width="60%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/js/accounting.min.js"></script>
+<!-- DatePicker Manager -->
+<script src="assets/js/datepicker.js"></script>
+<!--  Charts Plugin -->
+<script src="assets/js/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="assets/js/bootstrap-notify.js"></script>
+<!--  Google Maps Plugin   
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+
+</html>
